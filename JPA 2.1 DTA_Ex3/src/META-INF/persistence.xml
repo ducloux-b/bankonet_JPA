@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence_1_0.xsd"
+	version="1.0">
+	<persistence-unit name="Employes" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		
+		<class>com.bankonet.model.Departement</class>
+		<class>com.bankonet.model.Employe</class>
+		<class>com.bankonet.model.Personne</class>
+		<class>com.bankonet.model.Client</class>
+		<class>com.bankonet.model.Adresse</class>
+		<class>com.bankonet.model.Projet</class>
+		<class>com.bankonet.model.Participation</class>
+		
+		<properties>	
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/banque" />
+			<property name="javax.persistence.jdbc.user" value="ben" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<property name="eclipselink.ddl-generation" value="create-tables"/>
+    		<property name="eclipselink.logging.level" value="INFO"/>
+		</properties>
+	</persistence-unit>
+</persistence>
